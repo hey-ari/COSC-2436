@@ -2,7 +2,7 @@
  
  Lab 1: maxarray.cpp
  Programmmer: Ariadna Ayala
- Status: Completed
+ Status: Completed (Reworked)
  IDE used: Xcode
 */
 
@@ -13,25 +13,24 @@
 //using namespace std;
 
 template <class T>
-T max(T arr[], int size)
+ T maxArray(T arr[], int size)
 {
-   T maxNum = arr[0];
 
-    for (int k = 1; k < size; k++)
+    if (size <= 1)
+    return arr[0];
+
+    else if (size > 1)
     {
-        if(arr[k] > maxNum)
-        {
-            maxNum = arr[k];
-        }
+        return std::max(arr[size - 1], maxArray(arr, size - 1));
     }
-    return maxNum;
+    return arr[0];
 }
 
 int main()
 {
     int numArray[] = {3, 0, 7, 99, 13};
-    std :: cout << "Maximum number is: " << max(numArray, 5) << std :: endl;
-    char alphaArray[] = {'g', 'a', 'p','D', 'a'};
-    std :: cout << "Maximum character is: " << max(alphaArray, 5) << std :: endl;
+    std :: cout << "Maximum number is: " << maxArray(numArray, 5) << std :: endl;
+    char alphaArray[] = {'Z', 'a', 'p','D', 'a'};
+    std :: cout << "Maximum character is: " << maxArray(alphaArray, 5) << std :: endl;
     return 0;
 }
