@@ -3,6 +3,7 @@
  Lab 1: maxarray.cpp
  Programmmer: Ariadna Ayala
  Status: Completed (Reworked)
+ Instructor's Notes (To Fix In The Future): Does not follow the book design of splitting array logically in half each time it calls.
  IDE used: Xcode
 */
 
