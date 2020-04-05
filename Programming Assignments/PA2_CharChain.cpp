@@ -3,6 +3,7 @@
  Lab 2: charchain.cpp
  Programmmer: Ariadna Ayala
  Status: Completed (Reworked)
+ Instructor's Notes(To fix in the future): For menu submatch option I should be able to enter a negative match, no user input is allowed. Use nullptr, not NULL﻿
  IDE used: Xcode
  
  Note: If you choose option one second time, it appends it to the latest value of a.
